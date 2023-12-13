@@ -46,6 +46,7 @@ class TextBuiltIn extends HtmlExtension {
       return TextSpan(
         text: '\n',
         style: context.styledElement!.style.generateTextStyle(),
+        semanticsLabel: '',
       );
     }
 
@@ -53,6 +54,7 @@ class TextBuiltIn extends HtmlExtension {
     return TextSpan(
       style: element.style.generateTextStyle(),
       text: element.text!.transformed(element.style.textTransform),
+      semanticsLabel: '',
     );
   }
 }
